@@ -1,0 +1,31 @@
+{
+  "name": "vote_framework",
+  "version": "1.0.1",
+  "description": "Toolkit for creation and sharing your own vote ",
+  "main": "truffle-config.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "dependencies": {
+    "truffle-hdwallet-provider": "^0.0.6",
+    "lite-server":"*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "blockchain-doppelganger"
+  },
+  "keywords": [
+    "blockchain",
+    "vote",
+    "framework",
+    "javascript"
+  ],
+  "author": "blockchain-doppelganger",
+  "license": "ISC"
+}
