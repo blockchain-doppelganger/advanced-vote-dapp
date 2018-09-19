@@ -13,10 +13,10 @@ contract VoteFactory {
         admin = msg.sender;
     }
     
-    function createVote(bytes32[] _candidates, bytes32[] _conditions, string _voteTitle, string _voteChairman, uint _timeStart, uint _timeEnd,  bool _publicContract){
+    function createVote(address _chairman, bytes32[] _candidates, bytes32[] _conditions, string _voteTitle, string _voteChairman, uint _timeStart, uint _timeEnd,  bool _publicContract){
         require(_candidates.length > 0);
         
-        Vote c = new Vote(_candidates, _conditions, _voteTitle, _voteChairman, _timeStart, _timeEnd, _publicContract);
+        Vote c = new Vote(_chairman,_candidates, _conditions, _voteTitle, _voteChairman, _timeStart, _timeEnd, _publicContract);
         if (_publicContract) {
             allPublicContract.push(c);
         }

@@ -26,8 +26,8 @@ contract Vote {
     event BadVoting(uint indexed proposal, address indexed voter, bytes32 indexed condition);
     event GoodVoting(uint indexed proposal, address indexed voter, bytes32 indexed condition);
 
-    constructor(bytes32[] _candidates, bytes32[] _conditions, string _voteTitle, string _voteChairman, uint _timeStart, uint _timeEnd,  bool _publicContract) public {
-        chairperson = msg.sender;
+    constructor(address _chairman,bytes32[] _candidates, bytes32[] _conditions, string _voteTitle, string _voteChairman, uint _timeStart, uint _timeEnd,  bool _publicContract) public {
+        chairperson = _chairman;
         conditions = _conditions;
 
         title = _voteTitle;
